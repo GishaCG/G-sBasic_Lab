@@ -1,0 +1,53 @@
+*********************************** AND Gate**********************************************
+import numpy as np
+
+x1 = np.array([0,0,1,1])
+x2 = np.array([0,1,0,1])
+w1 = 0.5
+w2 = 0.5
+bias = 1
+final=[]
+
+for i in range(3):
+    sum1=np.multiply(x1,w1)
+    sum2=np.multiply(x2,w2)
+    w_sum=(sum1+sum2+bias)
+
+for item in w_sum:
+    if item<2:
+        item=0
+    else:
+        item=1
+    final.append(item)
+w_sum = final
+
+print("AND Gate Perceptron")
+for i in range(4):
+    print(x1[i],x2[i],"->",final[i])
+
+*********************************** OR Gate**********************************************
+import numpy as np
+
+x1 = np.array([0,0,1,1])
+x2 = np.array([0,1,0,1])
+w1 = 0.5
+w2 = 0.5
+bias = 1
+final=[]
+
+for i in range(3):
+    sum1=np.multiply(x1,w1)
+    sum2=np.multiply(x2,w2)
+    w_sum=(sum1+sum2+bias)
+
+for item in w_sum:
+    if item<1.5:
+        item=0
+    else:
+        item=1
+    final.append(item)
+w_sum = final
+
+print("AND Gate Perceptron")
+for i in range(4):
+    print(x1[i],x2[i],"->",final[i])
